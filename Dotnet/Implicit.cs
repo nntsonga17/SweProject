@@ -1,0 +1,9 @@
+global using Microsoft.EntityFrameworkCore;
+global using System;
+global using Microsoft.AspNetCore.Mvc;
+global using System.ComponentModel.DataAnnotations;
+global using System.Text.Json.Serialization;
+global using Models;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using Web.EmailService;
