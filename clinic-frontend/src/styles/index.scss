@@ -1,0 +1,17 @@
+// Global Styles
+@import "./global.scss";
+@import "./colors.scss";
+
+// External styles
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+// Components
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/slider.scss";
+
+// Pages
+@import "./pages/create_appointment.scss";
+@import "./pages/home.scss";
+@import "./pages/services.scss";

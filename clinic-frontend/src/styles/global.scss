@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+
+p,
+a {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: none;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+
+  @media (max-width: 760px) {
+    font-size: 14px;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1400px;
+  padding-inline: 24px;
+  margin-inline: auto;
+
+  @media (max-width: 760px) {
+    padding-inline: 16px;
+  }
+}
+
+.line {
+  width: 150px;
+  height: 3px;
+  background: #3540de;
+}
+
+.paper {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}

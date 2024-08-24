@@ -1,0 +1,58 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  position: relative;
+  border-bottom: 2px solid $blue;
+
+  @media (max-width: 1024px) {
+    border: none;
+    padding: 0;
+  }
+
+  .hamburger-react {
+    position: absolute !important;
+    right: 24px;
+    top: 18px;
+    z-index: 9999999999999999;
+    transition: all 0.4s ease-in-out;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  nav {
+    @media (max-width: 1024px) {
+      position: fixed;
+      inset: 0;
+      transition: all 0.4s ease-in-out;
+      transform: translateX(100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ul {
+        flex-direction: column;
+      }
+
+      &.active {
+        transform: translateX(0);
+        z-index: 99999999;
+        background: white;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      padding: 8px 12px;
+      a {
+        color: $blue;
+      }
+    }
+  }
+}

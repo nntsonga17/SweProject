@@ -1,0 +1,81 @@
+.footer {
+  .wave {
+    margin-bottom: -5px;
+  }
+  footer {
+    background: #1d1d1e;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 80px;
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+
+      .social {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        p {
+          color: #fff;
+          @media (max-width: 1024px) {
+            text-align: center;
+          }
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          @media (max-width: 1024px) {
+            justify-content: center;
+          }
+
+          a {
+            svg {
+              width: 32px;
+              height: 32px;
+              fill: $blue;
+            }
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 24px;
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 18px;
+        }
+
+        li {
+          a {
+            color: #fff;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+
+    .bot {
+      width: 100%;
+      padding: 24px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

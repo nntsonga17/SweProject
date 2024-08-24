@@ -1,0 +1,101 @@
+.createAppointment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+
+  .inner {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    h1 {
+      margin-bottom: 18px;
+      font-size: 36px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      position: relative;
+      input,
+      textarea {
+        border-radius: 6px;
+        border: 1px solid grey;
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        width: 100%;
+        &:focus {
+          border-color: $blue;
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+      }
+
+      .field {
+        position: relative;
+        label {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 12px;
+          background: #fff;
+          font-size: 16px;
+          color: grey;
+          font-weight: 300;
+          pointer-events: none;
+          transition: all 0.2s ease-in-out;
+          padding: 0 4px;
+        }
+        input,
+        textarea {
+          width: 100%;
+          font-size: 16px;
+          line-height: 20px;
+          &:focus + label,
+          &:not([value=""]) + label {
+            top: -8px;
+            transform: translateY(0);
+            font-size: 12px;
+
+            &.textareaLabel {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .errorMessage {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: red;
+        position: absolute;
+        bottom: -24px;
+      }
+
+      button {
+        border-radius: 6px;
+        background: $blue;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background: #1623db;
+        }
+      }
+    }
+  }
+}
