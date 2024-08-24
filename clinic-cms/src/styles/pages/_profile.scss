@@ -1,0 +1,14 @@
+.profilePage {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+  .paper {
+    .paperBody {
+      .fields {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 16px;
+      }
+    }
+  }
+}

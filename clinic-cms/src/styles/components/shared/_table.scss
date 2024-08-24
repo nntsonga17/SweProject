@@ -1,0 +1,288 @@
+.tableComponent {
+  border-radius: 8px;
+  border: 1px solid $color-border;
+  .tableSearch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 16px 16px 0 16px;
+    svg {
+      position: absolute;
+      left: 16px;
+      width: 16px;
+      height: 16px;
+    }
+    input {
+      padding: 12px 16px 12px 48px;
+      width: 100%;
+    }
+  }
+
+  .tableWrapper {
+    .table {
+      .tableHolder {
+        .tableBody {
+          .tableRow {
+            &:nth-child(even) {
+              background: #f9fbfc;
+            }
+          }
+        }
+        .tableRow {
+          display: grid;
+          align-items: center;
+          grid-gap: 10px;
+          padding: 0 16px;
+          border-bottom: 1px solid $color-border;
+          &.tableHeader {
+            .tableCell {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 20px;
+              letter-spacing: 0.04em;
+              text-transform: uppercase;
+              color: $color-secondary;
+              span {
+                cursor: pointer;
+              }
+            }
+          }
+          .tableCell {
+            padding: 16px 0;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &.center {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+            }
+            .tableCellActionBtn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 0;
+              background: $color-white;
+              cursor: pointer;
+              width: 30px;
+              height: 30px;
+              transition: all 0.2s ease-in-out;
+              border-radius: 50%;
+              &:hover {
+                background: $color-bg;
+              }
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            a {
+              &.link {
+                text-decoration-line: underline;
+              }
+            }
+            .linked {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            &.regular {
+              position: relative;
+              width: 100%;
+              overflow: unset;
+              ul {
+                position: absolute;
+                top: 100%;
+                right: 10px;
+                z-index: 2;
+                background: $color-white;
+                border: 1px solid $color-border;
+                box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08);
+                border-radius: 8px;
+                overflow: hidden;
+                min-width: 200px;
+                li {
+                  width: 100%;
+                  padding: 12px 16px;
+                  transition: all 0.2s ease-in-out;
+                  border-bottom: 1px solid $color-border;
+                  font-size: 14px;
+                  line-height: 20px;
+                  cursor: pointer;
+                  &.danger {
+                    color: $color-error;
+                  }
+                  &:last-child {
+                    border-bottom: 0;
+                  }
+                  &:hover {
+                    background: $color-secondary;
+                  }
+                  a {
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
+                }
+              }
+            }
+            &.indexOf {
+              &::after {
+                content: '.';
+              }
+            }
+            .moreBtn {
+              width: 20px;
+              height: 20px;
+              background: transparent;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+        .noSearchResults {
+          text-align: center;
+          padding: 50px 0;
+          font-weight: 500;
+        }
+      }
+    }
+    .tableLegend {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      .tablePerPage {
+        display: flex;
+        align-items: center;
+        grid-gap: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+      .tablePagination {
+        display: flex;
+        align-items: center;
+        grid-gap: 8px;
+        margin-left: auto;
+        .arrow {
+          width: 40px;
+          height: 40px;
+          background: $color-white;
+          border: 1px solid $color-border;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          &:hover {
+            background: $color-secondary;
+          }
+          &.prev {
+            transform: rotate(90deg);
+          }
+          &.next {
+            transform: rotate(-90deg);
+          }
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        .item {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 500;
+          background: $color-white;
+          border-radius: 50%;
+          cursor: pointer;
+          border: 0;
+          &.active {
+            width: 40px;
+            height: 40px;
+            background: $color-primary;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .tableOrders {
+    .tableRow {
+      grid-template-columns: 100px 1fr 1fr 1fr 1fr 100px;
+      position: relative;
+
+      .orderItemsHolder {
+        position: relative;
+
+        .orderItemPreview {
+          position: absolute;
+          background: $color-white;
+          border: 1px solid $color-border;
+          border-radius: 6px;
+          padding: 8px;
+          width: 200px;
+          z-index: 10;
+          overflow-y: auto;
+          z-index: 999999999999;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+          max-height: 350px;
+          &.emailPreview {
+            width: fit-content;
+          }
+          .item {
+            border-bottom: 1px solid $color-border;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            &:last-child {
+              border-bottom: 0;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+            p {
+              font-size: 12px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .tableCell {
+        &.actionButtons {
+          display: flex;
+          align-items: center;
+          grid-gap: 8px;
+          svg {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .tableProducts {
+    .tableRow {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+      position: relative;
+
+      .tableCell {
+        &.actionButtons {
+          display: flex;
+          align-items: center;
+          grid-gap: 8px;
+          svg {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

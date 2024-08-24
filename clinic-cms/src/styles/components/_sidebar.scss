@@ -1,0 +1,105 @@
+.appSidebar {
+  padding: 16px;
+  height: 100vh;
+  position: relative;
+  background: $color-white;
+  .legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    height: 38px;
+    .logo {
+      svg {
+        width: 150px;
+      }
+    }
+    .circle {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-secondary;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 5px;
+        height: 5px;
+        background: $color-secondary;
+        border-radius: 50%;
+      }
+    }
+  }
+  nav {
+    overflow-y: auto;
+    height: calc(100vh - 130px);
+    .group {
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 5px;
+      p {
+        font-size: 12px;
+        color: $color-secondary;
+        padding-left: 16px;
+        margin-bottom: -5px;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+      a {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 16px 1fr;
+        grid-gap: 8px;
+        border-radius: 6px;
+        padding: 8px 16px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-sub-text;
+        font-weight: 300;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+        &:hover {
+          background: $color-bg;
+        }
+        &.active {
+          color: $color-white;
+          background: linear-gradient(
+            72.47deg,
+            $color-primary 22.16%,
+            rgba($color-primary, 0.7) 76.47%
+          );
+        }
+      }
+    }
+  }
+  .signOut {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: $color-border;
+    padding: 0;
+    cursor: pointer;
+    @media only screen and (max-width: 1500px) {
+      position: static;
+      margin-bottom: 20px;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $color-black;
+    }
+  }
+}

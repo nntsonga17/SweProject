@@ -1,0 +1,18 @@
+.badge {
+  padding: 3px 6px;
+  border-radius: 32px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+  width: fit-content;
+  background: $color-bg;
+  &.completed {
+    color: $color-success;
+    background: rgba($color: $color-success, $alpha: 0.1);
+  }
+  &.pending {
+    color: $color-warning;
+    background: rgba($color: $color-warning, $alpha: 0.1);
+  }
+}

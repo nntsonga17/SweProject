@@ -1,0 +1,60 @@
+.loginWrapper {
+  width: 100vw;
+  height: 100vh;
+  background: $color-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    background: $color-white;
+    width: 450px;
+    max-width: 80%;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    padding: 22px;
+
+    .hello {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+      padding: 15px 0 15px 0;
+      font-weight: 400;
+
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    h5 {
+      font-size: 25px;
+      margin-bottom: 7px;
+      font-weight: 200;
+      &:after {
+        content: '👋🏻';
+        margin-left: 6px;
+      }
+    }
+
+    p {
+      color: $color-sub-text;
+      margin-bottom: 15px;
+    }
+
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      button {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+}

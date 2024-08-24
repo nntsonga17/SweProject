@@ -1,0 +1,32 @@
+// Libraries
+@import '~react-toastify/dist/ReactToastify.css';
+@import '~react-date-range/dist/styles.css';
+@import '~react-date-range/dist/theme/default.css';
+
+// Global
+@import 'colors';
+@import 'reset';
+
+// Pages
+@import 'pages/profile';
+@import 'pages/createPofile';
+@import 'pages/servicesPage';
+@import 'pages/formularsPage';
+@import 'pages/patientsPage';
+
+// Components
+@import 'components/login';
+@import 'components/sidebar';
+@import 'components/shared/image_uploader';
+
+// Shared
+@import 'components/shared//paper';
+@import 'components/shared/table';
+@import 'components/shared/print';
+
+// UI
+@import 'components/ui/button';
+@import 'components/ui/input';
+@import 'components/ui/checkbox';
+@import 'components/ui/modal';
+@import 'components/ui/uploadImageDropzone';
